@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.phjethva.login.signup.sqlite.database.activity.ActivityLogin">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <com.phjethva.login.signup.sqlite.database.widget.MyEditText
+        android:id="@+id/et_un"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="4dp"
+        android:gravity="left|center_vertical"
+        android:hint="@string/un"
+        android:paddingLeft="8dp" />
+
+    <com.phjethva.login.signup.sqlite.database.widget.MyEditText
+        android:id="@+id/et_pw"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/et_un"
+        android:layout_margin="4dp"
+        android:gravity="left|center_vertical"
+        android:hint="@string/pw"
+        android:paddingLeft="8dp" />
+
+    <com.phjethva.login.signup.sqlite.database.widget.MyButton
+        android:id="@+id/bt_log"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/bt_reg"
+        android:layout_margin="4dp"
+        android:gravity="center"
+        android:text="@string/log" />
+
+    <com.phjethva.login.signup.sqlite.database.widget.MyButton
+        android:id="@+id/bt_reg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/bt_adm"
+        android:layout_margin="4dp"
+        android:gravity="center"
+        android:text="@string/reg" />
+
+    <com.phjethva.login.signup.sqlite.database.widget.MyButton
+        android:id="@+id/bt_adm"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="4dp"
+        android:gravity="center"
+        android:text="@string/adm" />
+
+</RelativeLayout>

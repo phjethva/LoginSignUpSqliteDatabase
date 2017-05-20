@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+    android:id="@+id/activity_admin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context="com.phjethva.login.signup.sqlite.database.activity.ActivityMain">
+    tools:context="com.phjethva.login.signup.sqlite.database.activity.ActivityAdmin">
 
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_adm"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/bt_out"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp">
+
+    </android.support.v7.widget.RecyclerView>
     <com.phjethva.login.signup.sqlite.database.widget.MyButton
         android:id="@+id/bt_out"
         android:layout_width="match_parent"

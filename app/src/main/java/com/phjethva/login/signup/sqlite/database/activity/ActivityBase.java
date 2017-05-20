@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class ActivityBase extends AppCompatActivity {
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
 
@@ -24,4 +24,5 @@ public class ActivityBase extends AppCompatActivity {
     public void alertDialog(String ttl, String msg){
 
     }
+
 }
