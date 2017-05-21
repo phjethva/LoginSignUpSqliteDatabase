@@ -54,10 +54,18 @@
         android:id="@+id/bt_log"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/bt_ext"
         android:layout_margin="4dp"
         android:gravity="center"
         android:text="@string/log" />
 
+    <com.phjethva.login.signup.sqlite.database.widget.MyButton
+        android:id="@+id/bt_ext"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="4dp"
+        android:gravity="center"
+        android:text="@string/ext" />
 </RelativeLayout>

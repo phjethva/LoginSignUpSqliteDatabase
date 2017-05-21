@@ -33,7 +33,6 @@ public class MyTextView extends TextView {
             Typeface tf = Typeface.createFromAsset(context.getAssets(), "fonts/ic_fnt.ttf");
             textView.setTypeface(tf);
             textView.setTextSize(18);
-            textView.setTextColor(Color.WHITE);
         }
     }
 

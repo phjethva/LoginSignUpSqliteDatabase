@@ -12,6 +12,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.phjethva.login.signup.sqlite.database.R;
+import com.phjethva.login.signup.sqlite.database.helper.DBHelper;
+import com.phjethva.login.signup.sqlite.database.models.User;
 import com.phjethva.login.signup.sqlite.database.widget.MyButton;
 import com.phjethva.login.signup.sqlite.database.widget.MyEditText;
 import com.phjethva.login.signup.sqlite.database.widget.MyTextView;
@@ -21,8 +23,9 @@ public class ActivityRegister extends ActivityBase implements View.OnClickListen
     private Toolbar toolbar;
     private MyTextView tvTB;
     private MyEditText etUN, etEI, etPW;
-    private MyButton btReg, btLog;
+    private MyButton btReg, btLog, btExt;
     private String strUN, strEI, strPW;
+    private DBHelper dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,10 +34,13 @@ public class ActivityRegister extends ActivityBase implements View.OnClickListen
 
         setUpView();
 
+        dbHelper = new DBHelper(this);
+
         tvTB.setText(R.string.reg);
 
         btReg.setOnClickListener(this);
         btLog.setOnClickListener(this);
+        btExt.setOnClickListener(this);
 
     }
 
@@ -44,26 +50,23 @@ public class ActivityRegister extends ActivityBase implements View.OnClickListen
         etUN = (MyEditText) findViewById(R.id.et_un);
         etEI = (MyEditText) findViewById(R.id.et_ei);
         etPW = (MyEditText) findViewById(R.id.et_pw);
-        btLog = (MyButton) findViewById(R.id.bt_log);
         btReg = (MyButton) findViewById(R.id.bt_reg);
+        btLog = (MyButton) findViewById(R.id.bt_log);
+        btExt = (MyButton) findViewById(R.id.bt_ext);
     }
 
     @Override
     public void onClick(View v) {
         int id = v.getId();
         switch (id) {
-            case R.id.bt_log:
-                Intent iLog = new Intent(getApplicationContext(), ActivityLogin.class);
-                startActivity(iLog);
-                finish();
-                break;
             case R.id.bt_reg:
                 strUN = etUN.getText().toString().trim();
                 strEI = etEI.getText().toString().trim();
                 strPW = etPW.getText().toString().trim();
                 if (!strUN.equals("") && !strEI.equals("") && !strPW.equals("")) {
-                    Intent iAdm = new Intent(getApplicationContext(), ActivityMain.class);
-                    startActivity(iAdm);
+                    dbHelper.addUser(new User(strUN, strEI, strPW));
+                    Intent iMin = new Intent(getApplicationContext(), ActivityMain.class);
+                    startActivity(iMin);
                     finish();
                 } else if (strUN.equals("") && strEI.equals("") && strPW.equals("")) {
                     showToast("Enter All Fields");
@@ -75,6 +78,13 @@ public class ActivityRegister extends ActivityBase implements View.OnClickListen
                     showToast("Enter Password");
                 }
                 break;
+            case R.id.bt_log:
+                Intent iLog = new Intent(getApplicationContext(), ActivityLogin.class);
+                startActivity(iLog);
+                finish();
+                break;
+            case R.id.bt_ext:
+                finish();
         }
     }
 }

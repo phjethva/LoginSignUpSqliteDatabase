@@ -11,6 +11,40 @@
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bt_out"
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="4dp"
+        android:orientation="vertical">
+
+        <com.phjethva.login.signup.sqlite.database.widget.MyTextView
+            android:id="@+id/tv_un"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:lines="2"
+            android:textColor="@color/black" />
+
+        <com.phjethva.login.signup.sqlite.database.widget.MyTextView
+            android:id="@+id/tv_ei"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:lines="2"
+            android:textColor="@color/black" />
+
+        <com.phjethva.login.signup.sqlite.database.widget.MyTextView
+            android:id="@+id/tv_pw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:lines="2"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
     <com.phjethva.login.signup.sqlite.database.widget.MyButton
         android:id="@+id/bt_out"
         android:layout_width="match_parent"

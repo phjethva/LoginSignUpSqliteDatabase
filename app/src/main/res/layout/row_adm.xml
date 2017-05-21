@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    card_view:cardBackgroundColor="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:orientation="vertical">
+
+        <com.phjethva.login.signup.sqlite.database.widget.MyTextView
+            android:id="@+id/row_tv_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="8dp"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <com.phjethva.login.signup.sqlite.database.widget.MyTextView
+            android:id="@+id/row_tv_un"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="8dp"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <com.phjethva.login.signup.sqlite.database.widget.MyTextView
+            android:id="@+id/row_tv_ei"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="8dp"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <com.phjethva.login.signup.sqlite.database.widget.MyTextView
+            android:id="@+id/row_tv_pw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="8dp"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
